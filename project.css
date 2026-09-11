@@ -1,0 +1,37 @@
+/* Стили подробной страницы проекта. */
+.detail-page { background: var(--paper); }
+.detail-back { position: fixed; z-index: 5; top: 25px; left: 25px; padding: 11px 16px; border-radius: 30px; color: var(--white); background: var(--brown); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.detail-back:hover { background: var(--clay-dark); }
+.detail-main { padding: 145px 0 110px; }
+.detail-main h1 { max-width: 820px; margin: 0; font-family: var(--serif); font-size: clamp(60px, 10vw, 140px); font-weight: 400; letter-spacing: -.07em; line-height: .88; }
+.detail-lead { max-width: 500px; margin: 35px 0 65px; color: var(--muted); font-family: var(--serif); font-size: 24px; }
+.detail-image { position: relative; min-height: 530px; overflow: hidden; margin-bottom: 75px; background: var(--sand); }
+.detail-image::before, .detail-image::after { position: absolute; content: ''; border-radius: 50%; }
+.detail-image::before { top: 12%; left: 17%; width: 47%; height: 70%; background: rgba(255,255,255,.35); }
+.detail-image::after { right: 5%; bottom: -30%; width: 42%; height: 80%; background: rgba(152,105,76,.26); }
+.detail-image img { position: relative; z-index: 2; display: block; width: 100%; height: 100%; min-height: 530px; object-fit: cover; }
+.detail-image > span { position: absolute; z-index: 1; top: 50%; left: 50%; color: rgba(62,48,40,.62); font-family: var(--serif); font-size: 24px; font-style: italic; transform: translate(-50%, -50%); white-space: nowrap; }
+.detail-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; padding-bottom: 105px; border-bottom: 1px solid var(--line); }
+.detail-columns h2 { margin: 0 0 18px; font-family: var(--serif); font-size: 44px; font-weight: 400; line-height: 1; }
+.detail-columns p { max-width: 480px; margin: 0; color: var(--muted); }
+.detail-facts { align-self: center; }
+.detail-facts p { padding: 18px 0; border-top: 1px solid var(--line); }
+.detail-facts small, .detail-facts strong { display: block; }
+.detail-facts small { margin-bottom: 5px; color: var(--clay-dark); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.detail-facts strong { font-family: var(--serif); font-size: 20px; font-weight: 400; }
+.similar-projects { padding-top: 85px; }
+.similar-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.similar-card { display: block; }
+.similar-card__image { display: grid; height: 250px; margin-bottom: 18px; place-items: center; color: rgba(62,48,40,.6); font-family: var(--serif); font-size: 18px; font-style: italic; }
+.similar-card__image--one { background: #d4b69c; }
+.similar-card__image--two { background: #b8b19b; }
+.similar-card strong, .similar-card small { display: block; }
+.similar-card strong { font-family: var(--serif); font-size: 24px; font-weight: 400; }
+.similar-card small { margin-top: 5px; color: var(--clay-dark); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+@media (max-width: 700px) {
+  .detail-main { padding-top: 115px; }
+  .detail-lead { font-size: 20px; }
+  .detail-image, .detail-image img { min-height: 340px; }
+  .detail-columns { grid-template-columns: 1fr; gap: 45px; padding-bottom: 70px; }
+  .similar-grid { grid-template-columns: 1fr; }
+}

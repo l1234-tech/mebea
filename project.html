@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Проекты Mebea — мебель для уютного дома." />
+  <title>Проект Mebea</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body class="detail-page">
+  <a class="detail-back" href="index.html#projects">← Все проекты</a>
+
+  <!-- Эта страница одна для всех направлений: название меняется через параметр project в адресе. -->
+  <main class="detail-main">
+    <div class="container">
+      <p class="eyebrow" id="project-eyebrow">Проект Mebea</p>
+      <h1 id="project-title">Мебель для дома</h1>
+      <p class="detail-lead" id="project-lead">Индивидуальный проект, созданный под ваш образ жизни.</p>
+
+      <!-- Замените путь к изображению и alt-текст на фотографии конкретного проекта. -->
+      <div class="detail-image detail-image--placeholder">
+        <img id="project-image" src="assets/images/project-main.jpg" alt="Главное фото проекта Mebea" onerror="this.style.display='none'" />
+        <span>место для главного фото проекта</span>
+      </div>
+
+      <div class="detail-columns">
+        <div>
+          <h2 id="project-subtitle">Продумано для вас</h2>
+          <p id="project-description">Мы учитываем размеры помещения, привычки семьи и желаемое настроение, чтобы мебель была красивой, удобной и долговечной.</p>
+        </div>
+        <div class="detail-facts">
+          <p><small>В проект входит</small><strong>Замер · проект · изготовление · монтаж</strong></p>
+          <p><small>Ориентир по сроку</small><strong>От 30 до 60 рабочих дней</strong></p>
+        </div>
+      </div>
+
+      <section class="similar-projects">
+        <p class="eyebrow">Похожие решения</p>
+        <div class="similar-grid">
+          <!-- Эти изображения можно заменить на отдельные фотографии из assets/images/. -->
+          <a href="index.html#projects" class="similar-card"><span class="similar-card__image similar-card__image--one">фото похожего проекта</span><strong>Материалы и детали</strong><small>смотреть все проекты ↗</small></a>
+          <a href="index.html#contacts" class="similar-card"><span class="similar-card__image similar-card__image--two">фото похожего проекта</span><strong>Обсудить свой проект</strong><small>связаться с нами ↗</small></a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    // Данные для отдельных направлений. Здесь можно менять тексты и alt-тексты.
+    const projects = {
+      kitchens: {
+        title: 'Кухни',
+        lead: 'Кухня, в которой удобно готовить, встречаться и жить каждый день.',
+        subtitle: 'Функциональность и тепло',
+        description: 'Продумываем хранение, рабочие зоны, свет и материалы так, чтобы кухня легко подстраивалась под ваши привычки.',
+        image: 'assets/images/kitchens-main.jpg',
+        alt: 'Индивидуальная кухня Mebea в тёплых натуральных оттенках'
+      },
+      bedrooms: {
+        title: 'Спальни',
+        lead: 'Спокойное пространство для отдыха, восстановления и личных ритуалов.',
+        subtitle: 'Пространство для отдыха',
+        description: 'Создаём мягкую атмосферу и продуманное хранение, чтобы в спальне было легко поддерживать порядок и замедляться.',
+        image: 'assets/images/bedrooms-main.jpg',
+        alt: 'Уютная спальня Mebea с мебелью из натуральных материалов'
+      },
+      living: {
+        title: 'Залы',
+        lead: 'Гостиная, которая поддерживает любой сценарий вашего дома.',
+        subtitle: 'Встречаться и быть собой',
+        description: 'Подбираем мебель для отдыха, общения и работы дома, сохраняя ощущение воздуха и цельность интерьера.',
+        image: 'assets/images/living-rooms-main.jpg',
+        alt: 'Светлая гостиная Mebea с индивидуальной мебелью'
+      },
+      hallways: {
+        title: 'Прихожие',
+        lead: 'Первое впечатление о доме начинается с порядка и удобства.',
+        subtitle: 'Порядок с первого шага',
+        description: 'Используем каждый сантиметр входной зоны: делаем удобные места для верхней одежды, обуви и повседневных мелочей.',
+        image: 'assets/images/hallways-main.jpg',
+        alt: 'Организованная прихожая Mebea с вместительными шкафами'
+      }
+    };
+
+    const key = new URLSearchParams(window.location.search).get('project') || 'kitchens';
+    const project = projects[key] || projects.kitchens;
+    document.title = `${project.title} — Mebea`;
+    document.querySelector('#project-eyebrow').textContent = `Проект / ${project.title}`;
+    document.querySelector('#project-title').textContent = project.title;
+    document.querySelector('#project-lead').textContent = project.lead;
+    document.querySelector('#project-subtitle').textContent = project.subtitle;
+    document.querySelector('#project-description').textContent = project.description;
+    document.querySelector('#project-image').src = project.image;
+    document.querySelector('#project-image').alt = project.alt;
+  </script>
+</body>
+</html>

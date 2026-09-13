@@ -4,9 +4,9 @@
 
 Рекомендуемые имена файлов:
 - `kitchens.jpg` — фото кухни на главной;
-- `bedrooms.jpg` — фото спальни на главной;
-- `living-rooms.jpg` — фото зала на главной;
+- `cabinets.jpg` — фото шкафа на главной;
+- `living-rooms.jpg` — фото гостиной на главной;
 - `hallways.jpg` — фото прихожей на главной;
-- `kitchens-main.jpg`, `bedrooms-main.jpg`, `living-rooms-main.jpg`, `hallways-main.jpg` — большие фото на страницах проектов.
+- `kitchens-main.jpg`, `cabinets-main.jpg`, `living-rooms-main.jpg`, `hallways-main.jpg` — большие фото на страницах проектов.
 
 Если файл ещё не добавлен, сайт показывает цветовой placeholder с подписью. Для каждой фотографии уже подготовлен осмысленный `alt`-текст в HTML.

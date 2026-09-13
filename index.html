@@ -36,11 +36,10 @@
       <h1>Mebea</h1>
       <p class="hero__tagline">уютно дома</p>
 
-      <!-- Место под приветственное лого, фотографию или другую фирменную деталь. -->
-      <div class="welcome-placeholder">
-        <span class="welcome-placeholder__line"></span>
-        <span>место для приветственного лого / фразы</span>
-        <span class="welcome-placeholder__line"></span>
+      <!-- Приветственная фраза вместо временного placeholder — её можно заменить на логотип бренда. -->
+      <div class="welcome-message">
+        <span class="welcome-message__mark" aria-hidden="true">✦</span>
+        <p><strong>Дом начинается<br />с деталей</strong><small>мебель по вашему образу жизни</small></p>
       </div>
 
       <a class="scroll-hint" href="#projects" aria-label="Перейти к проектам">
@@ -83,19 +82,19 @@
           </article>
 
           <article class="project-card" data-project-card>
-            <div class="project-card__media project-card__media--bedroom">
-              <img src="assets/images/bedrooms.jpg" alt="Уютная спальня с мебелью из натуральных материалов" onerror="this.style.display='none'" />
+            <div class="project-card__media project-card__media--cabinet">
+              <img src="assets/images/cabinets.jpg" alt="Вместительные шкафы по индивидуальному проекту" onerror="this.style.display='none'" />
               <span class="project-card__number">02</span>
-              <span class="project-card__image-note">ваше фото спальни</span>
+              <span class="project-card__image-note">ваше фото шкафа</span>
             </div>
             <div class="project-card__body">
               <button class="project-card__trigger" type="button" aria-expanded="false">
-                <span><strong>Спальни</strong><small>пространство для отдыха</small></span>
+                <span><strong>Шкафы</strong><small>порядок и характер пространства</small></span>
                 <span class="project-card__plus" aria-hidden="true">+</span>
               </button>
               <div class="project-card__details">
-                <p>Создаём спокойные спальни с продуманным хранением, мягкими фактурами и атмосферой, в которой легко замедлиться.</p>
-                <a class="text-link" href="project.html?project=bedrooms">Подробнее <span>↗</span></a>
+                <p>Проектируем вместительные шкафы под размеры помещения: продумываем хранение, отделку и детали, которые поддерживают интерьер.</p>
+                <a class="text-link" href="project.html?project=cabinets">Подробнее <span>↗</span></a>
               </div>
             </div>
           </article>
@@ -104,11 +103,11 @@
             <div class="project-card__media project-card__media--living">
               <img src="assets/images/living-rooms.jpg" alt="Светлая гостиная с индивидуальной мебелью" onerror="this.style.display='none'" />
               <span class="project-card__number">03</span>
-              <span class="project-card__image-note">ваше фото зала</span>
+              <span class="project-card__image-note">ваше фото гостиной</span>
             </div>
             <div class="project-card__body">
               <button class="project-card__trigger" type="button" aria-expanded="false">
-                <span><strong>Залы</strong><small>встречаться и быть собой</small></span>
+                <span><strong>Гостиные</strong><small>встречаться и быть собой</small></span>
                 <span class="project-card__plus" aria-hidden="true">+</span>
               </button>
               <div class="project-card__details">
@@ -188,7 +187,7 @@
           <div class="process-steps">
             <div class="process-step">
               <span class="process-step__number">01</span>
-              <div><h3>Знакомство</h3><p>Обсуждаем задачу, стиль и бюджет. Вы присылаете план помещения или приглашаем на замер.</p></div>
+              <div><h3>Знакомство</h3><p>Обсуждаем задачу, стиль и бюджет. Приезжаем на замеры и обсуждаем, что вам нужно.</p></div>
             </div>
             <div class="process-step">
               <span class="process-step__number">02</span>
@@ -208,10 +207,9 @@
             <p class="eyebrow">ориентиры</p>
             <h3>От идеи<br />до дома</h3>
             <ul>
-              <li><span>Кухня</span><strong>от 180 000 ₽</strong></li>
-              <li><span>Спальня</span><strong>от 120 000 ₽</strong></li>
-              <li><span>Гостиная</span><strong>от 100 000 ₽</strong></li>
-              <li><span>Прихожая</span><strong>от 75 000 ₽</strong></li>
+              <li><span>Кухни</span><strong>от 70 000 ₽</strong></li>
+              <li><span>Шкафы</span><strong>от 20 000 ₽</strong></li>
+              <li><span>Гостиные</span><strong>от 100 000 ₽</strong></li>
             </ul>
             <p class="price-card__note">Точная стоимость зависит от размеров, материалов, фурнитуры и сложности проекта.</p>
             <a class="button button--dark" href="#contacts">Обсудить проект <span>↗</span></a>
@@ -233,8 +231,8 @@
       </div>
       <div class="footer__contacts">
         <!-- Замените значения и ссылки на реальные контакты компании. -->
-        <a href="tel:+79990000000"><small>Телефон</small><span>+7 (999) 000-00-00</span></a>
-        <a href="https://wa.me/79990000000" target="_blank" rel="noreferrer"><small>WhatsApp</small><span>Написать в WhatsApp ↗</span></a>
+        <a href="tel:+79273187766"><small>Телефон</small><span>+7 (927) 318-77-66</span></a>
+        <a href="https://wa.me/79273187766" target="_blank" rel="noreferrer"><small>WhatsApp</small><span>Написать в WhatsApp ↗</span></a>
         <a href="#contacts"><small>MAX</small><span>Наш чат в MAX ↗</span></a>
         <a href="mailto:hello@mebea.ru"><small>Почта</small><span>hello@mebea.ru</span></a>
       </div>

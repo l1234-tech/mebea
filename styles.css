@@ -92,7 +92,23 @@ button { color: inherit; font: inherit; }
 .site-nav a span { color: var(--muted); font-family: var(--sans); font-size: 10px; letter-spacing: .12em; }
 .site-nav__note { max-width: 220px; margin-top: auto; color: var(--muted); font-family: var(--serif); font-size: 18px; }
 
-/* Первый экран. Место под логотип — welcome-placeholder. */
+.welcome-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 92px;
+  padding: 16px 23px;
+  border: 1px solid rgba(255, 253, 249, .35);
+  border-radius: 2px;
+  background: rgba(62, 48, 40, .16);
+  text-align: left;
+}
+.welcome-message__mark { color: #f2c4a7; font-size: 25px; }
+.welcome-message p { margin: 0; }
+.welcome-message strong, .welcome-message small { display: block; }
+.welcome-message strong { font-family: var(--serif); font-size: 22px; font-weight: 400; line-height: 1.05; }
+.welcome-message small { margin-top: 7px; color: rgba(255, 253, 249, .68); font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+
 .hero {
   position: relative;
   display: flex;
@@ -110,8 +126,6 @@ button { color: inherit; font: inherit; }
 .hero__eyebrow { color: rgba(255, 253, 249, .75); }
 .hero h1 { margin: 0; font-family: var(--serif); font-size: clamp(90px, 16vw, 218px); font-weight: 400; letter-spacing: -.08em; line-height: .82; }
 .hero__tagline { margin: 30px 0 0; color: rgba(255, 253, 249, .78); font-family: var(--serif); font-size: clamp(23px, 3vw, 38px); font-style: italic; letter-spacing: .02em; }
-.welcome-placeholder { display: flex; width: min(510px, 100%); align-items: center; gap: 16px; margin: 100px auto 0; color: rgba(255, 253, 249, .7); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
-.welcome-placeholder__line { height: 1px; flex: 1; background: rgba(255, 253, 249, .45); }
 .scroll-hint { display: inline-flex; align-items: center; gap: 14px; margin-top: 88px; color: var(--white); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
 .scroll-hint__arrow { display: grid; width: 35px; height: 35px; place-items: center; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; font-size: 18px; transition: transform .25s; }
 .scroll-hint:hover .scroll-hint__arrow { transform: translateY(4px); }
@@ -134,7 +148,7 @@ button { color: inherit; font: inherit; }
 .project-card__media::before { top: 20%; left: 13%; width: 58%; height: 58%; background: rgba(255,250,243,.36); }
 .project-card__media::after { right: -8%; bottom: -28%; width: 55%; height: 75%; background: rgba(152, 105, 76, .26); }
 .project-card__media--kitchen { background: #c29f7c; }
-.project-card__media--bedroom { background: #d3b7a1; }
+.project-card__media--cabinet { background: #d3b7a1; }
 .project-card__media--living { background: #b8b19b; }
 .project-card__media--hallway { background: #c8aa84; }
 .project-card__media img { position: relative; z-index: 2; display: block; width: 100%; height: 100%; min-height: inherit; object-fit: cover; }
@@ -227,8 +241,11 @@ button { color: inherit; font: inherit; }
   .hero { min-height: 600px; }
   .hero__content { padding-top: 40px; }
   .hero h1 { font-size: 85px; }
-  .welcome-placeholder { margin-top: 80px; font-size: 8px; }
-  .scroll-hint { margin-top: 60px; }
+  .welcome-message { margin-top: 72px; }
+  .welcome-message { margin-top: 65px; padding: 13px 16px; }
+  .welcome-message__mark { font-size: 20px; }
+  .welcome-message strong { font-size: 18px; }
+  .welcome-message small { font-size: 8px; }
   .hero__side-label { display: none; }
   .services-grid { grid-template-columns: 1fr; }
   .service-item, .service-item:not(:first-child) { min-height: auto; padding: 25px 0; border-right: 0; border-top: 1px solid rgba(255,255,255,.2); }
